@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGBB · Cobrança por boleto no piloto automático para o seu negócio | Primeserv TI</title>
+<meta name="description" content="Emita boletos com Pix, avise clientes automaticamente, receba com baixa automática e acompanhe a inadimplência. Para condomínios, escolas, academias, provedores, clínicas, imobiliárias e mais.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+<body>
+
+<!-- =====================================================
+     TOPO
+     ===================================================== -->
+<header id="topo">
+  <div class="conteudo topo-interno">
+    <a class="topo-marca" href="#inicio" aria-label="SGBB, início">
+      <span class="topo-logo-primeserv">PRIMESERV TI</span>
+      <span>SGBB</span>
+    </a>
+    <button id="botao-menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="menu-principal" id="menu-principal" aria-label="Principal">
+      <a href="#segmentos">Segmentos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#perguntas">Dúvidas</a>
+      <a class="botao botao-principal" href="#contato">Solicitar proposta</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- =====================================================
+     HERÓI
+     ===================================================== -->
+<section id="heroi">
+  <div class="conteudo heroi-grade">
+    <div class="heroi-texto-bloco">
+      <h1 class="heroi-titulo">Cobrança por boleto no piloto automático, seja qual for o seu negócio</h1>
+      <p class="heroi-texto">Emita, avise o cliente, receba com baixa automática e acompanhe a inadimplência. Tudo no SGBB, o Sistema Gerenciador de Boletos Bancários.</p>
+      <div class="heroi-acoes">
+        <a class="botao botao-principal" href="#contato">Solicitar proposta</a>
+        <a class="botao botao-secundario" href="#demonstracao">Testar a demonstração</a>
+      </div>
+      <ul class="heroi-provas">
+        <li>Boleto com Pix</li>
+        <li>Baixa automática</li>
+        <li>Integração direta com o banco</li>
+      </ul>
+    </div>
+
+    <!-- Ilustração: cobranças em diferentes situações -->
+    <div class="heroi-pilha" aria-hidden="true">
+      <div class="cobranca-viva cobranca-viva-paga"><div><strong>Mensalidade · Turma 3B</strong><span>Baixa automática feita</span></div><span class="etiqueta-situacao">Pago</span></div>
+      <div class="cobranca-viva"><div><strong>Plano mensal · Cliente 0412</strong><span>E-mail enviado com boleto e Pix</span></div><span class="etiqueta-situacao">Emitido</span></div>
+      <div class="cobranca-viva cobranca-viva-aviso"><div><strong>Aluguel · Sala 12</strong><span>Lembrete antes do vencimento</span></div><span class="etiqueta-situacao">Vence em 3 dias</span></div>
+      <div class="cobranca-viva cobranca-viva-atraso"><div><strong>Taxa condominial · Unidade 402</strong><span>Aviso de atraso enviado</span></div><span class="etiqueta-situacao">Em atraso</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FAIXA DE SEGMENTOS
+     ===================================================== -->
+<div id="faixa-segmentos">
+  <div class="conteudo faixa-interna">
+    <strong>Para quem cobra todo mês:</strong>
+    <span>Condomínios</span><span>Escolas</span><span>Academias</span><span>Provedores</span><span>Clínicas</span><span>Imobiliárias</span><span>Associações</span><span>Serviços</span>
+  </div>
+</div>
+
+<!-- =====================================================
+     SEGMENTOS (conteúdo gerado pelo script, edite em SEGMENTOS)
+     ===================================================== -->
+<section id="segmentos" class="secao secao-clara">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Escolha o seu segmento e veja como fica</h2>
+      <p class="subtitulo-secao">O SGBB cuida de qualquer cobrança recorrente por boleto. Veja como ele se encaixa na rotina do seu negócio.</p>
+    </div>
+
+    <div class="segmentos-abas" id="segmentos-abas" role="tablist" aria-label="Segmentos atendidos"></div>
+
+    <div class="segmento-painel" id="segmento-painel" role="tabpanel" aria-live="polite">
+      <div class="segmento-texto">
+        <h3 class="segmento-titulo" id="segmento-titulo"></h3>
+        <p class="segmento-dor" id="segmento-dor"></p>
+        <ul class="lista-recursos" id="segmento-lista"></ul>
+        <a class="botao botao-principal" href="#contato">Quero isso no meu negócio</a>
+      </div>
+      <div class="segmento-exemplo">
+        <p class="exemplo-aviso">Exemplo ilustrativo</p>
+        <h3>Demonstrativo de Cobrança</h3>
+        <p class="exemplo-referencia" id="exemplo-referencia"></p>
+        <table class="tabela-demonstrativo">
+          <thead><tr><th>Descrição</th><th>Valor (R$)</th></tr></thead>
+          <tbody id="exemplo-itens"></tbody>
+          <tfoot><tr><td>Total</td><td id="exemplo-total"></td></tr></tfoot>
+        </table>
+        <p class="exemplo-rodape">Pix copia e cola e QR Code no próprio boleto, com a marca da sua empresa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     COMO FUNCIONA
+     ===================================================== -->
+<section id="como-funciona" class="secao secao-escura">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Quatro passos, nenhum retrabalho</h2>
+    </div>
+    <ol class="passos">
+      <li class="passo"><h3>Cadastre</h3><p>Sua empresa, seus clientes e a identidade visual do boleto.</p></li>
+      <li class="passo"><h3>Emita</h3><p>Individual, em lote por planilha ou de forma recorrente.</p></li>
+      <li class="passo"><h3>Notifique</h3><p>E-mails automáticos com boleto, linha digitável e Pix.</p></li>
+      <li class="passo"><h3>Receba</h3><p>O pagamento é reconhecido e a baixa acontece sozinha.</p></li>
+    </ol>
+    <p class="destaque-banco"><strong>Integração direta com o banco:</strong> sem arquivos de remessa e retorno, sem baixa manual.</p>
+  </div>
+</section>
+
+<!-- =====================================================
+     RECURSOS
+     ===================================================== -->
+<section id="recursos" class="secao secao-clara">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Tudo o que a cobrança precisa, em um só lugar</h2>
+    </div>
+    <div class="recursos-grade">
+      <article class="recurso recurso-grande">
+        <h3>Cobrança recorrente</h3>
+        <p>Configure uma vez. O sistema gera os boletos de cada ciclo, mensal ou no intervalo que você definir.</p>
+      </article>
+      <article class="recurso recurso-grande">
+        <h3>Importação em lote</h3>
+        <p>Suba a planilha CSV do mês e emita a carteira inteira de uma só vez.</p>
+      </article>
+      <article class="recurso">
+        <h3>Acordos parcelados</h3>
+        <p>Renegocie débitos atrasados em até 99 parcelas.</p>
+      </article>
+      <article class="recurso">
+        <h3>Pix no boleto</h3>
+        <p>Pix copia e cola e QR Code no próprio documento.</p>
+      </article>
+      <article class="recurso">
+        <h3>Multa, juros e desconto</h3>
+        <p>Multa e juros de mora configuráveis e desconto por pontualidade.</p>
+      </article>
+      <article class="recurso">
+        <h3>Segunda via em um clique</h3>
+        <p>Boleto atualizado a qualquer momento, sem pedido por telefone ou e-mail.</p>
+      </article>
+      <article class="recurso">
+        <h3>Marca e demonstrativo</h3>
+        <p>Logo da empresa e demonstrativo item a item, que dão confiança a quem paga.</p>
+      </article>
+      <article class="recurso">
+        <h3>Vários CNPJs ou unidades</h3>
+        <p>Cada grupo com logo, textos de e-mail, painel e relatórios próprios, e usuários que só enxergam o seu grupo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     RÉGUA DE COBRANÇA
+     ===================================================== -->
+<section id="regua" class="secao secao-escura">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Da cobrança amigável ao protesto, no mesmo sistema</h2>
+      <p class="subtitulo-secao">O cliente é avisado ao emitir, antes do vencimento, após o atraso e ao pagar. Textos editáveis, com nome, valor e vencimento preenchidos sozinhos, e histórico completo de envios.</p>
+    </div>
+    <div class="regua">
+      <article class="degrau"><small>Automático</small><h3>Lembrete</h3><p>Aviso antes do vencimento.</p></article>
+      <article class="degrau"><small>Automático</small><h3>Aviso de atraso</h3><p>Cobrança após o vencimento.</p></article>
+      <article class="degrau"><small>Um clique</small><h3>Segunda via</h3><p>Boleto atualizado para o cliente pagar.</p></article>
+      <article class="degrau"><small>Um clique</small><h3>Protesto</h3><p>Enviado direto pelo sistema.</p></article>
+      <article class="degrau"><small>Um clique</small><h3>Negativação</h3><p>Inclusão sem sair da tela.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PAINEL
+     ===================================================== -->
+<section id="painel" class="secao secao-clara">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">A saúde da carteira num único olhar</h2>
+    </div>
+    <div class="painel-grade">
+      <ul class="lista-recursos">
+        <li>Emitido, recebido e inadimplência, com variação sobre o período anterior</li>
+        <li>Quanto está atrasado e há quantos dias</li>
+        <li>Maiores devedores e vencimentos dos próximos 7 dias</li>
+        <li>Filtro por período e por grupo</li>
+        <li>Relatório de operações por período e operador, com exportação em PDF e Excel</li>
+      </ul>
+      <div class="painel-ilustracao" role="img" aria-label="Ilustração da tela do painel">
+        <small>Ilustração da tela</small>
+        <div class="painel-indicadores">
+          <div class="indicador">Emitido</div>
+          <div class="indicador indicador-recebido">Recebido</div>
+          <div class="indicador indicador-atraso">Em atraso</div>
+          <div class="indicador indicador-areceber">A receber</div>
+        </div>
+        <p class="painel-legenda">Atraso por faixa de dias</p>
+        <div class="grafico-atraso"><div class="barra-atraso barra-1"></div><div class="barra-atraso barra-2"></div><div class="barra-atraso barra-3"></div><div class="barra-atraso barra-4"></div></div>
+        <div class="grafico-rotulos"><span>1–30</span><span>31–60</span><span>61–90</span><span>+90 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     CONFIANÇA
+     ===================================================== -->
+<section id="confianca" class="secao secao-escura">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Segurança e transparência de ponta a ponta</h2>
+    </div>
+    <div class="confianca-lista">
+      <article class="confianca-item"><h3>Conexão criptografada</h3><p>Perfis de acesso (administrador e operador) e dados isolados por grupo.</p></article>
+      <article class="confianca-item"><h3>Trilha de auditoria</h3><p>Registro de quem emitiu, excluiu ou protestou cada boleto, e quando.</p></article>
+      <article class="confianca-item"><h3>Boleto como foi enviado</h3><p>O histórico de e-mails guarda o PDF exatamente como o cliente recebeu.</p></article>
+      <article class="confianca-item"><h3>Produto vivo</h3><p>Evolução contínua pela equipe da Primeserv TI, guiada pelas necessidades dos clientes.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     CALCULADORA
+     ===================================================== -->
+<section id="calculadora" class="secao secao-clara">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Quanto tempo a emissão manual toma hoje?</h2>
+      <p class="subtitulo-secao">Informe o seu volume e veja as horas por mês gastas só para emitir boletos um a um.</p>
+    </div>
+    <div class="calculadora">
+      <div>
+        <div class="campo">
+          <label for="campo-boletos">Boletos emitidos por mês</label>
+          <input id="campo-boletos" type="number" min="0" value="200" inputmode="numeric">
+        </div>
+        <div class="campo">
+          <label for="campo-minutos">Minutos para emitir cada boleto à mão</label>
+          <input id="campo-minutos" type="number" min="0" step="0.5" value="3" inputmode="decimal">
+        </div>
+      </div>
+      <div class="calculadora-resultado" aria-live="polite">
+        <div class="resultado-numero" id="resultado-horas">10 h</div>
+        <p class="resultado-legenda">por mês só digitando boletos</p>
+        <p class="resultado-nota">Cálculo simples com os números que você informou. Com cobrança recorrente e importação em lote, essa digitação deixa de ser repetida todo mês.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     ANTES E DEPOIS
+     ===================================================== -->
+<section id="antes-depois" class="secao secao-branca">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">A rotina com e sem o SGBB</h2>
+    </div>
+    <div class="rolagem-tabela">
+      <table class="tabela-comparativa">
+        <thead><tr><th>Tarefa</th><th>Rotina manual</th><th>Com o SGBB</th></tr></thead>
+        <tbody>
+          <tr><td>Emitir a cobrança mensal</td><td>Boleto a boleto, todo mês</td><td>Recorrência e importação em lote</td></tr>
+          <tr><td>Avisar os clientes</td><td>Mensagens avulsas, uma a uma</td><td>E-mails automáticos por etapa</td></tr>
+          <tr><td>Confirmar pagamentos</td><td>Conferência manual de extrato</td><td>Baixa automática do pagamento</td></tr>
+          <tr><td>Medir inadimplência</td><td>Planilhas e cruzamentos</td><td>Painel com atraso e devedores</td></tr>
+          <tr><td>Atualizar um boleto</td><td>Pedido por telefone ou e-mail</td><td>Segunda via em um clique</td></tr>
+          <tr><td>Prestar contas</td><td>Relatório montado à mão</td><td>PDF e Excel em um clique</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PERGUNTAS FREQUENTES
+     ===================================================== -->
+<section id="perguntas" class="secao secao-clara">
+  <div class="conteudo">
+    <div class="cabecalho-secao">
+      <h2 class="titulo-secao">Perguntas frequentes</h2>
+    </div>
+    <div class="perguntas">
+      <details class="pergunta">
+        <summary>O SGBB serve só para condomínios?</summary>
+        <p>Não. Ele nasceu na cobrança condominial, mas atende qualquer negócio que cobra por boleto de forma recorrente: escolas, academias, provedores, clínicas, imobiliárias, associações e prestadores de serviço.</p>
+      </details>
+      <details class="pergunta">
+        <summary>Preciso trabalhar com arquivos de remessa e retorno?</summary>
+        <p>Não. A integração é direta com o banco, sem arquivos de remessa e retorno e sem baixa manual.</p>
+      </details>
+      <details class="pergunta">
+        <summary>Posso emitir muitos boletos de uma vez?</summary>
+        <p>Sim. Você sobe a planilha CSV do mês e emite a carteira inteira de uma só vez, ou configura a cobrança recorrente para o sistema gerar os boletos de cada ciclo.</p>
+      </details>
+      <details class="pergunta">
+        <summary>O cliente recebe aviso sem eu precisar fazer nada?</summary>
+        <p>Sim. Ele recebe e-mails automáticos ao emitir, antes do vencimento, após o atraso e ao pagar. Os textos são editáveis e há histórico completo de envios.</p>
+      </details>
+      <details class="pergunta">
+        <summary>Consigo renegociar quem está em atraso?</summary>
+        <p>Sim, com acordos parcelados em até 99 parcelas. Também é possível gerar segunda via, protestar e negativar direto pelo sistema.</p>
+      </details>
+      <details class="pergunta">
+        <summary>Posso gerenciar mais de uma empresa ou unidade?</summary>
+        <p>Sim. Cada grupo tem logo, textos de e-mail, painel e relatórios próprios, e cada usuário enxerga apenas o grupo ao qual pertence.</p>
+      </details>
+      <details class="pergunta">
+        <summary>Como faço para conhecer o sistema?</summary>
+        <p>Há uma demonstração em ambiente isolado, em que nada gera cobrança real. O endereço está logo abaixo. Para valores e condições, solicite uma proposta.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     DEMONSTRAÇÃO E CONTATO
+     ===================================================== -->
+<section id="demonstracao" class="secao secao-escura">
+  <div class="conteudo fechamento-grade">
+    <div>
+      <h2 class="titulo-secao">Veja o SGBB funcionando agora</h2>
+      <a class="demonstracao-endereco" href="https://sgbb.grupoaira.com.br/demo" target="_blank" rel="noopener">sgbb.grupoaira.com.br/demo</a>
+      <ol class="demonstracao-passos">
+        <li>Abra o endereço no navegador.</li>
+        <li>Clique em “Entrar com o acesso de demonstração”.</li>
+        <li>Explore Dashboard, Boletos, Notificações e Relatórios.</li>
+      </ol>
+      <p class="demonstracao-aviso">Ambiente isolado: nada do que for feito aqui gera cobrança real.</p>
+    </div>
+
+    <form id="contato" aria-labelledby="titulo-formulario">
+      <h3 id="titulo-formulario">Solicite uma proposta</h3>
+      <div class="formulario-linha">
+        <div class="campo"><label for="campo-nome">Seu nome</label><input id="campo-nome" type="text" required autocomplete="name"></div>
+        <div class="campo"><label for="campo-empresa">Empresa</label><input id="campo-empresa" type="text" required autocomplete="organization"></div>
+      </div>
+      <div class="formulario-linha">
+        <div class="campo"><label for="campo-telefone">WhatsApp</label><input id="campo-telefone" type="tel" required autocomplete="tel"></div>
+        <div class="campo"><label for="campo-email">E-mail</label><input id="campo-email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="formulario-linha">
+        <div class="campo">
+          <label for="campo-segmento">Segmento</label>
+          <select id="campo-segmento" required></select>
+        </div>
+        <div class="campo"><label for="campo-volume">Boletos por mês (aprox.)</label><input id="campo-volume" type="number" min="0" inputmode="numeric"></div>
+      </div>
+      <div class="campo"><label for="campo-mensagem">Conte rapidamente como cobra hoje</label><textarea id="campo-mensagem" rows="3"></textarea></div>
+      <div class="formulario-opcoes">
+        <button type="submit" class="botao botao-principal" data-canal="whatsapp">Enviar pelo WhatsApp</button>
+        <button type="submit" class="botao botao-secundario botao-secundario-escuro" data-canal="email">Enviar por e-mail</button>
+      </div>
+      <p id="mensagem-formulario" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer id="rodape">
+  <div class="conteudo rodape-interno">
+    <span>SGBB · Sistema Gerenciador de Boletos Bancários</span>
+    <span>Um produto Primeserv TI</span>
+  </div>
+</footer>
+
+<a id="botao-flutuante-whatsapp" href="#contato">Falar com um consultor</a>
+
+<script>
+/* =====================================================
+   CONFIGURAÇÃO (edite aqui)
+   ===================================================== */
+// Somente números, com DDI e DDD. Exemplo: 5531999999999
+const NUMERO_WHATSAPP = "5500000000000";
+const EMAIL_COMERCIAL = "comercial@seudominio.com.br";
+
+/* =====================================================
+   SEGMENTOS (edite textos, benefícios e exemplos)
+   ===================================================== */
+const SEGMENTOS = [
+  {
+    id: "condominios", nome: "Condomínios e administradoras",
+    titulo: "Taxa condominial sem digitar de novo",
+    dor: "Todo mês, a mesma taxa repetida para dezenas de unidades, com inadimplência difícil de acompanhar e síndico pedindo relatório.",
+    beneficios: [
+      "Cobrança recorrente e importação em lote da planilha do mês",
+      "Painel e relatórios por condomínio, com logo e textos próprios",
+      "Prestação de contas pronta para o síndico, em PDF e Excel",
+      "Acordos parcelados para débitos atrasados"
+    ],
+    referencia: "Residencial Aurora · Unidade 402 · Vencimento 10/11",
+    itens: [["Taxa ordinária", 620.00], ["Fundo de reserva", 62.00], ["Água e gás", 148.50]]
+  },
+  {
+    id: "escolas", nome: "Escolas e cursos",
+    titulo: "Mensalidades emitidas e acompanhadas sem planilha",
+    dor: "Matrículas, descontos e atrasos de dezenas ou centenas de alunos, com a secretaria correndo atrás de segunda via e confirmação de pagamento.",
+    beneficios: [
+      "Mensalidades recorrentes, com emissão automática a cada ciclo",
+      "Desconto por pontualidade e multa e juros configuráveis",
+      "Aviso automático aos responsáveis antes e depois do vencimento",
+      "Segunda via em um clique, sem ocupar a secretaria"
+    ],
+    referencia: "Turma 3B · Aluno 0127 · Vencimento 05/11",
+    itens: [["Mensalidade", 890.00], ["Material didático", 95.00], ["Desconto por pontualidade", -45.00]]
+  },
+  {
+    id: "academias", nome: "Academias e clubes",
+    titulo: "Planos mensais cobrados sem esforço",
+    dor: "Muitos alunos com planos e vencimentos diferentes, e atrasos que passam despercebidos até virarem perda.",
+    beneficios: [
+      "Cobrança recorrente por plano e por vencimento",
+      "Lembrete e aviso de atraso enviados sozinhos",
+      "Pix no boleto para o cliente pagar na hora",
+      "Painel com atraso por faixa de dias"
+    ],
+    referencia: "Plano trimestral · Aluno 0412 · Vencimento 12/11",
+    itens: [["Plano mensal", 129.90], ["Taxa de manutenção", 15.00]]
+  },
+  {
+    id: "provedores", nome: "Provedores de internet",
+    titulo: "Assinaturas mensais com baixa automática",
+    dor: "Milhares de cobranças recorrentes e conferência manual de pagamentos que consome a equipe financeira.",
+    beneficios: [
+      "Importação em lote da base de assinantes",
+      "Baixa automática pela integração direta com o banco",
+      "Régua de cobrança até protesto e negativação, no mesmo sistema",
+      "Relatórios por período e operador, com trilha de auditoria"
+    ],
+    referencia: "Assinante 08231 · Vencimento 15/11",
+    itens: [["Plano 500 Mega", 99.90], ["Roteador (locação)", 12.00]]
+  },
+  {
+    id: "clinicas", nome: "Clínicas e consultórios",
+    titulo: "Pacotes e mensalidades sem cobrança manual",
+    dor: "Tratamentos parcelados e planos recorrentes que dependem de alguém lembrar de cobrar e conferir.",
+    beneficios: [
+      "Parcelamento de tratamentos com boletos emitidos de uma vez",
+      "Acordos de até 99 parcelas para valores em atraso",
+      "Confirmação de pagamento enviada ao cliente",
+      "Marca da clínica no boleto e no e-mail"
+    ],
+    referencia: "Tratamento ortodôntico · Parcela 4 de 12 · Vencimento 20/11",
+    itens: [["Parcela do tratamento", 380.00], ["Manutenção mensal", 90.00]]
+  },
+  {
+    id: "imobiliarias", nome: "Imobiliárias e locação",
+    titulo: "Aluguéis e encargos em um só boleto",
+    dor: "Vários contratos com valores e vencimentos diferentes, e o repasse depende de saber quem pagou e quem atrasou.",
+    beneficios: [
+      "Cobrança recorrente por contrato",
+      "Demonstrativo item a item com aluguel e encargos",
+      "Baixa automática e painel de devedores",
+      "Histórico de envios para comprovar o que foi enviado"
+    ],
+    referencia: "Contrato 2210 · Sala 12 · Vencimento 10/11",
+    itens: [["Aluguel", 2400.00], ["Condomínio", 520.00], ["IPTU (parcela)", 180.00]]
+  },
+  {
+    id: "associacoes", nome: "Associações e sindicatos",
+    titulo: "Contribuições de associados em dia",
+    dor: "Base grande de associados, contribuições mensais e pouca visão de quem está em atraso.",
+    beneficios: [
+      "Importação em lote da base de associados",
+      "Avisos automáticos por e-mail em cada etapa",
+      "Painel com atrasos e maiores devedores",
+      "Relatórios exportáveis para prestação de contas"
+    ],
+    referencia: "Associado 03318 · Vencimento 08/11",
+    itens: [["Contribuição mensal", 75.00], ["Taxa de convênio", 12.00]]
+  },
+  {
+    id: "servicos", nome: "Comércio e serviços",
+    titulo: "Cobre clientes recorrentes sem sair da tela",
+    dor: "Contratos de manutenção, assinaturas e vendas a prazo que exigem emitir, avisar e conferir à mão.",
+    beneficios: [
+      "Emissão individual, em lote ou recorrente",
+      "Boleto com Pix e a marca da sua empresa",
+      "Lembrete, aviso de atraso e confirmação automáticos",
+      "Protesto e negativação em um clique quando for preciso"
+    ],
+    referencia: "Contrato de manutenção · Cliente 0089 · Vencimento 25/11",
+    itens: [["Serviço mensal", 450.00], ["Visita técnica", 120.00]]
+  }
+];
+
+/* =====================================================
+   ABAS DE SEGMENTOS
+   ===================================================== */
+const formatoReal = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const abasSegmentos = document.getElementById("segmentos-abas");
+
+function mostrarSegmento(id) {
+  const segmento = SEGMENTOS.find(s => s.id === id) || SEGMENTOS[0];
+  document.getElementById("segmento-titulo").textContent = segmento.titulo;
+  document.getElementById("segmento-dor").textContent = segmento.dor;
+  document.getElementById("segmento-lista").innerHTML = segmento.beneficios.map(b => "<li>" + b + "</li>").join("");
+  document.getElementById("exemplo-referencia").textContent = segmento.referencia;
+  document.getElementById("exemplo-itens").innerHTML = segmento.itens
+    .map(i => "<tr><td>" + i[0] + "</td><td>" + formatoReal.format(i[1]) + "</td></tr>").join("");
+  document.getElementById("exemplo-total").textContent = formatoReal.format(segmento.itens.reduce((t, i) => t + i[1], 0));
+  abasSegmentos.querySelectorAll(".segmento-aba").forEach(aba => {
+    aba.setAttribute("aria-selected", aba.dataset.id === segmento.id ? "true" : "false");
+  });
+}
+
+SEGMENTOS.forEach((s, i) => {
+  const aba = document.createElement("button");
+  aba.type = "button";
+  aba.className = "segmento-aba";
+  aba.setAttribute("role", "tab");
+  aba.dataset.id = s.id;
+  aba.textContent = s.nome;
+  aba.addEventListener("click", () => mostrarSegmento(s.id));
+  abasSegmentos.appendChild(aba);
+});
+mostrarSegmento(SEGMENTOS[0].id);
+
+// Opções do formulário
+const campoSegmento = document.getElementById("campo-segmento");
+campoSegmento.innerHTML = '<option value="">Selecione</option>' +
+  SEGMENTOS.map(s => '<option value="' + s.nome + '">' + s.nome + "</option>").join("") +
+  '<option value="Outro">Outro</option>';
+
+/* =====================================================
+   CALCULADORA
+   ===================================================== */
+const campoBoletos = document.getElementById("campo-boletos");
+const campoMinutos = document.getElementById("campo-minutos");
+const resultadoHoras = document.getElementById("resultado-horas");
+
+function calcularHoras() {
+  const horas = ((parseFloat(campoBoletos.value) || 0) * (parseFloat(campoMinutos.value) || 0)) / 60;
+  resultadoHoras.textContent = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 1 }).format(horas) + " h";
+}
+campoBoletos.addEventListener("input", calcularHoras);
+campoMinutos.addEventListener("input", calcularHoras);
+calcularHoras();
+
+/* =====================================================
+   FORMULÁRIO (abre o WhatsApp ou o e-mail já preenchido)
+   ===================================================== */
+const formularioContato = document.getElementById("contato");
+const mensagemFormulario = document.getElementById("mensagem-formulario");
+let canalEscolhido = "whatsapp";
+
+formularioContato.querySelectorAll("button[type=submit]").forEach(b =>
+  b.addEventListener("click", () => { canalEscolhido = b.dataset.canal; })
+);
+
+formularioContato.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  const valor = id => document.getElementById(id).value.trim();
+  const texto =
+    "Olá! Quero uma proposta do SGBB.\n" +
+    "Nome: " + valor("campo-nome") + "\n" +
+    "Empresa: " + valor("campo-empresa") + "\n" +
+    "WhatsApp: " + valor("campo-telefone") + "\n" +
+    "E-mail: " + valor("campo-email") + "\n" +
+    "Segmento: " + valor("campo-segmento") + "\n" +
+    "Boletos por mês: " + (valor("campo-volume") || "não informado") + "\n" +
+    "Como cobra hoje: " + (valor("campo-mensagem") || "não informado");
+
+  if (canalEscolhido === "whatsapp") {
+    window.open("https://wa.me/" + NUMERO_WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank", "noopener");
+  } else {
+    window.location.href = "mailto:" + EMAIL_COMERCIAL + "?subject=" + encodeURIComponent("Proposta SGBB") + "&body=" + encodeURIComponent(texto);
+  }
+  mensagemFormulario.textContent = "Pronto! Confirme o envio na janela que abriu.";
+});
+
+/* =====================================================
+   MENU NO CELULAR
+   ===================================================== */
+const botaoMenu = document.getElementById("botao-menu");
+const menuPrincipal = document.getElementById("menu-principal");
+botaoMenu.addEventListener("click", () => {
+  const aberto = menuPrincipal.classList.toggle("aberto");
+  botaoMenu.setAttribute("aria-expanded", aberto);
+});
+menuPrincipal.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") { menuPrincipal.classList.remove("aberto"); botaoMenu.setAttribute("aria-expanded", "false"); }
+});
+</script>
+</body>
+</html>
